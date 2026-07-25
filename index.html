@@ -79,7 +79,8 @@
     .harness-map{grid-template-columns:repeat(2,minmax(0,130px));gap:11px}.harness-map span{font-size:12px;padding:14px 9px}
     .support-visual .blocks{gap:9px}.support-visual .blocks span{font-size:12px;padding:12px 10px}
     .open-loop{gap:10px}.open-loop span{font-size:13px;padding:13px 12px}
-    .card-art{padding:10px!important;background:#faf7f1!important;overflow:hidden}.harness-visual.card-art:before{display:none}.card-art img{width:100%;height:100%;display:block;object-fit:contain;object-position:center}
+    .card-art{padding:0!important;background:#faf7f1!important;overflow:hidden}.harness-visual.card-art:before{display:none}.card-art img{width:100%;height:100%;display:block;object-fit:contain;object-position:center}
+    .harness-visual{min-height:230px}.single-case .case-card{display:block}.single-case .paper-visual,.single-case .open-visual{height:220px;min-height:220px}
     @media(max-width:820px){header.hero{min-height:auto;grid-template-columns:1fr;gap:42px}.hero-points{grid-template-columns:1fr 1fr}}
     @media(max-width:520px){.hero-points{grid-template-columns:1fr}.hero-point{min-height:auto}.awards{gap:24px}.award-list{display:flex}}
   </style>
@@ -99,16 +100,16 @@
 
     <section class="case-section" id="work">
       <div class="case-head"><span class="label">CTRIP · 2025 — PRESENT</span><h2>公司经历</h2></div>
-      <button class="case-card flagship" data-modal="harness-case"><div class="harness-visual card-art"><img src="assets/card-runtime-v1.png" alt="出境订单排障 Agent Harness 入口插图"></div><div class="case-copy"><span class="case-no">01 / FLAGSHIP HARNESS CASE</span><h3>出境订单排障 Agent</h3><p>把模型外部的执行、工具、上下文、训练与评测组织成一条可约束、可回放、可归因的工程链路。</p><span class="open-case">查看三个工程模块与 STAR 案例 <b>↗</b></span></div></button>
+      <button class="case-card flagship" data-modal="harness-case"><div class="harness-visual card-art"><img src="assets/card-runtime-v2.png" alt="出境订单排障 Agent Harness 入口插图"></div><div class="case-copy"><span class="case-no">01 / FLAGSHIP HARNESS CASE</span><h3>出境订单排障 Agent</h3><p>把模型外部的执行、工具、上下文、训练与评测组织成一条可约束、可回放、可归因的工程链路。</p><span class="open-case">查看三个工程模块与 STAR 案例 <b>↗</b></span></div></button>
       <div class="support-grid">
-        <button class="case-card support-card" data-modal="knowledge-case"><div class="support-visual card-art"><img src="assets/card-knowledge-v1.png" alt="业务文档引导多仓代码检索入口插图"></div><div class="case-copy"><span class="case-no">02 / SUPPORTING PROJECT</span><h3>业务与代码知识库</h3><p>先查文档形成业务指南，再进入多仓库构建代码证据链。</p><span class="open-case">简单了解 <b>↗</b></span></div></button>
-        <button class="case-card support-card" data-modal="repo-case"><div class="support-visual card-art"><img src="assets/card-multirepo-v1.png" alt="跨仓需求调研入口插图"></div><div class="case-copy"><span class="case-no">03 / SUPPORTING PROJECT</span><h3>跨仓需求调研 Skill</h3><p>主-子 Agent 分仓协作与渐进检索，补充多仓工具编排经验。</p><span class="open-case">简单了解 <b>↗</b></span></div></button>
+        <button class="case-card support-card" data-modal="knowledge-case"><div class="support-visual card-art"><img src="assets/card-knowledge-v2.png" alt="业务文档引导多仓代码检索入口插图"></div><div class="case-copy"><span class="case-no">02 / SUPPORTING PROJECT</span><h3>业务与代码知识库</h3><p>先查文档形成业务指南，再进入多仓库构建代码证据链。</p><span class="open-case">简单了解 <b>↗</b></span></div></button>
+        <button class="case-card support-card" data-modal="repo-case"><div class="support-visual card-art"><img src="assets/card-multirepo-v2.png" alt="跨仓需求调研入口插图"></div><div class="case-copy"><span class="case-no">03 / SUPPORTING PROJECT</span><h3>跨仓需求调研 Skill</h3><p>主-子 Agent 分仓协作与渐进检索，补充多仓工具编排经验。</p><span class="open-case">简单了解 <b>↗</b></span></div></button>
       </div>
     </section>
 
     <section class="case-section" id="research"><div class="case-head"><span class="label">RESEARCH · AAAI 2027 SUBMISSION</span><h2>研究论文</h2></div><article class="single-case"><button class="case-card" data-modal="paper-case"><div class="paper-visual"><img src="assets/memoworld-paper.png" alt="MemoWorld 论文首页预览"></div><div class="case-copy"><span class="case-no">CO-FIRST AUTHOR · IN SUBMISSION</span><h3>MemoWorld</h3><p>失败条件化 Memory World 生成，研究智能体记忆系统如何适应持续演化的依赖结构。</p><span class="open-case">居中查看论文与方法 <b>↗</b></span></div></button></article></section>
 
-    <section class="case-section" id="opensource"><div class="case-head"><span class="label">OPEN SOURCE · CORE CONTRIBUTOR</span><h2>开源项目</h2></div><article class="single-case"><button class="case-card" data-modal="open-case"><div class="open-visual card-art"><img src="assets/card-workbuddy-v1.png" alt="learn-workbuddy Agent Harness 入口插图"></div><div class="case-copy"><span class="case-no">OPEN SOURCE · CORE CONTRIBUTOR</span><h3>learn-workbuddy</h3><p>统一 Agent Loop、长任务上下文、恢复、权限门禁与 hash-chain Audit。</p><span class="open-case">查看核心贡献 <b>↗</b></span></div></button></article></section>
+    <section class="case-section" id="opensource"><div class="case-head"><span class="label">OPEN SOURCE · CORE CONTRIBUTOR</span><h2>开源项目</h2></div><article class="single-case"><button class="case-card" data-modal="open-case"><div class="open-visual card-art"><img src="assets/card-workbuddy-v2.png" alt="learn-workbuddy Agent Harness 入口插图"></div><div class="case-copy"><span class="case-no">OPEN SOURCE · CORE CONTRIBUTOR</span><h3>learn-workbuddy</h3><p>统一 Agent Loop、长任务上下文、恢复、权限门禁与 hash-chain Audit。</p><span class="open-case">查看核心贡献 <b>↗</b></span></div></button></article></section>
 
     <section class="awards" id="awards"><h2>奖项与成果</h2><div class="award-list"><div class="award"><strong>国家奖学金</strong></div><div class="award"><strong>全国大学生数学竞赛一等奖</strong></div><div class="award"><strong>SCI 论文两篇</strong></div></div></section>
   </main>
