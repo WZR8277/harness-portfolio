@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>王昭容 · Agent Harness Engineer</title>
+  <meta name="description" content="王昭容的 Agent Harness 工程主页：Runtime、Context Engineering、Recovery、Safety、Audit 与可验证评测。">
+  <style>
+    :root{--bg:#f5f4ef;--ink:#1d201e;--muted:#72766f;--line:#d4d7d0;--card:#fff;--green:#dce8df;--orange:#dd805a;--dark:#252a27}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,Arial,"PingFang SC",sans-serif}a{color:inherit}.wrap{width:min(1060px,calc(100% - 40px));margin:auto}
+    nav{height:70px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between}nav strong{font:500 19px Georgia,serif}nav div{display:flex;gap:23px}nav a{text-decoration:none;color:var(--muted);font-size:12px}
+    header{padding:88px 0 68px;display:grid;grid-template-columns:1fr 310px;gap:70px;align-items:end}.label{font:600 11px monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}h1{font:500 clamp(46px,7vw,78px)/1.05 Georgia,"Songti SC",serif;letter-spacing:-.04em;margin:18px 0 26px}header p{max-width:680px;font-size:17px;line-height:1.8;margin:0}.manifest{border-left:1px solid var(--line);padding-left:28px}.manifest p{font:13px/1.75 monospace;color:var(--muted)}.manifest strong{color:var(--ink)}
+    .principles{border-block:1px solid var(--line);display:grid;grid-template-columns:repeat(4,1fr)}.principles div{padding:21px 18px;border-right:1px solid var(--line)}.principles div:last-child{border:0}.principles span{display:block;font:10px monospace;color:var(--muted);margin-bottom:7px}.principles strong{font-size:13px}
+    main{padding:72px 0 105px}.section-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:24px}.section-head h2{margin:0;font:500 34px Georgia,"Songti SC",serif}.section-head span{font-size:12px;color:var(--muted)}
+    .grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.item{background:var(--card);border:1px solid var(--line);overflow:hidden;border-radius:3px}.item:first-child,.item.featured{grid-column:1/-1}.item summary{list-style:none;cursor:pointer}.item summary::-webkit-details-marker{display:none}
+    .visual{height:190px;padding:28px;background:#eceeea;display:flex;align-items:center;justify-content:center}.featured .visual{height:250px;background:var(--dark)}.runtime{width:100%;display:grid;grid-template-columns:repeat(5,1fr);align-items:center;gap:14px}.node{position:relative;text-align:center;border:1px solid #718078;background:#f8faf8;border-radius:5px;padding:14px 6px;font:10px monospace}.node:not(:last-child):after{content:"→";position:absolute;right:-14px;color:#aeb6b0}.featured .node{background:#343b37;color:#e7ebe8;border-color:#59655e}.featured .node:last-child{background:#d9e9dd;color:#1f2822}.stack{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;width:100%}.stack div{border:1px solid #9da59e;background:#f9faf8;padding:18px 12px;text-align:center;font:11px/1.5 monospace}.context div:nth-child(2){background:var(--green)}.safety div:nth-child(3){background:#f0ded6}
+    .copy{padding:24px}.num{font:10px monospace;color:var(--muted)}h3{font:500 25px Georgia,"Songti SC",serif;margin:14px 0 10px}.copy p{margin:0;color:#626660;font-size:14px;line-height:1.7}.open{margin-top:20px;display:flex;justify-content:space-between;font:600 11px monospace;color:var(--muted)}.open b{font-size:18px;transition:.2s}.item[open] .open b{transform:rotate(45deg)}
+    .detail{border-top:1px solid var(--line);padding:28px 24px 34px;background:#fbfbf8}.detail-grid{display:grid;grid-template-columns:155px 1fr;gap:32px}.detail h4{margin:0;font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.1em}.detail p{margin:0 0 14px;font-size:14px;line-height:1.75}.tags{display:flex;gap:7px;flex-wrap:wrap;margin-top:18px}.tags span{font:10px monospace;border:1px solid var(--line);border-radius:99px;padding:6px 9px}.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:22px}.fact{border-top:1px solid var(--line);padding-top:12px}.fact strong{display:block;font:500 21px Georgia,serif}.fact span{font-size:11px;color:var(--muted)}.external{display:inline-block;margin-top:12px;font-size:13px}
+    .education{height:auto;min-height:155px;display:grid;grid-template-columns:1fr 1fr;gap:35px;background:var(--green)}.education>div{border-left:1px solid #bbc9be;padding-left:22px}.education>div:first-child{border:0;padding:0}.education h3{margin:8px 0;font-size:27px}.education p{margin:0;color:var(--muted);font-size:13px}
+    .more{margin-top:85px;display:grid;grid-template-columns:1fr 2fr;gap:40px;border-top:1px solid var(--line);padding-top:28px}.more h2{font:500 29px Georgia,"Songti SC",serif;margin:0}.rows{display:grid}.row{padding:17px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:1fr auto;gap:20px;font-size:14px}.row span{color:var(--muted)}
+    footer{background:var(--dark);color:#edf0ed;padding:66px 0 24px}.foot-main{display:grid;grid-template-columns:1fr auto;gap:50px;align-items:end}.foot-main h2{font:500 clamp(36px,5vw,60px) Georgia,"Songti SC",serif;margin:12px 0}.contact{display:grid;gap:12px}.contact a{color:#edf0ed;font-size:14px}.base{border-top:1px solid #4d554f;padding-top:18px;margin-top:50px;display:flex;justify-content:space-between;color:#aeb5b0;font-size:11px}
+    @media(max-width:760px){header{grid-template-columns:1fr;gap:35px;padding:60px 0}.manifest{border:0;padding:0}.principles{grid-template-columns:1fr 1fr}.principles div:nth-child(2){border-right:0}.principles div:nth-child(-n+2){border-bottom:1px solid var(--line)}.grid{grid-template-columns:1fr}.item:first-child,.item.featured{grid-column:auto}.detail-grid,.more,.foot-main{grid-template-columns:1fr}.runtime{gap:7px}.node{padding:10px 2px;font-size:8px}.education{grid-template-columns:1fr}.facts{grid-template-columns:1fr 1fr}}
+  </style>
+</head>
+<body>
+  <nav class="wrap"><strong>WZR / Harness</strong><div><a href="#work">工程</a><a href="#research">研究</a><a href="#contact">联系</a></div></nav>
+  <header class="wrap"><div><div class="label">Agent Harness Engineer · Shanghai</div><h1>让 Agent 长任务<br>可运行、可恢复、可验证。</h1><p>王昭容，浙江大学电子信息硕士。专注 Agent Runtime、Context Engineering、工具协议、训练回放、权限安全与审计，将模型能力组织成可维护的工程系统。</p></div><aside class="manifest"><div class="label">Engineering belief</div><p>好的 Harness 不只是“接上模型”。它应该让行为<strong>可约束</strong>、轨迹<strong>可回放</strong>、故障<strong>可归因</strong>、任务<strong>可恢复</strong>。</p></aside></header>
+  <section class="principles wrap"><div><span>01</span><strong>Provider-neutral</strong></div><div><span>02</span><strong>Traceable by default</strong></div><div><span>03</span><strong>Fail closed</strong></div><div><span>04</span><strong>Deterministic recovery</strong></div></section>
+
+  <main class="wrap" id="work">
+    <div class="section-head"><h2>经历与核心工程</h2><span>点击卡片查看详情</span></div>
+    <div class="grid">
+      <details class="item">
+        <summary><div class="visual education"><div><span class="label">2022 — 2025</span><h3>浙江大学</h3><p>电子信息 · 硕士</p></div><div><span class="label">2018 — 2022</span><h3>北京科技大学</h3><p>智能科学与技术 · 本科</p></div></div><div class="copy"><span class="num">01 / EDUCATION</span><h3>教育经历</h3><p>研究训练塑造了问题定义、实验设计和可验证评测能力。</p><div class="open"><span>展开经历</span><b>＋</b></div></div></summary>
+        <div class="detail"><div class="detail-grid"><h4>Research training</h4><div><p>硕士研究方向为人工智能与计算机视觉，完成医学图像处理 SCI 论文；本科阶段参与小模型微调研究并发表 SCI 论文。</p><div class="tags"><span>人工智能</span><span>计算机视觉</span><span>Experiment Design</span></div></div></div></div>
+      </details>
+
+      <details class="item featured">
+        <summary><div class="visual"><div class="runtime"><div class="node">Provider</div><div class="node">Agent Loop</div><div class="node">Tool / Sidecar</div><div class="node">Transcript</div><div class="node">Recovery</div></div></div><div class="copy"><span class="num">02 / OPEN SOURCE · CORE CONTRIBUTOR</span><h3>learn-workbuddy · Agent Runtime</h3><p>统一多模型工具协议，将 Provider 行为从核心 Runtime 解耦，并用 Offline Mock 支撑确定性回归。</p><div class="open"><span>查看 Runtime 设计</span><b>＋</b></div></div></summary>
+        <div class="detail"><div class="detail-grid"><h4>Runtime abstraction</h4><div><p>作为核心参与者，统一 ToolSpec、ToolCall、ProviderRequest 与 ModelTurn 协议，将 Anthropic、OpenAI Responses / Chat、DeepSeek 和 Offline Mock 的工具调用归一到同一 Agent Loop。</p><p>Offline Mock 将 Provider 行为从核心运行时解耦，使关键路径可以在无外部依赖环境下进行确定性回归。</p><a class="external" href="https://github.com/adongwanai/learn-workbuddy" target="_blank" rel="noreferrer">在 GitHub 查看项目 ↗</a><div class="tags"><span>Agent Loop</span><span>Tool Protocol</span><span>Provider-neutral</span><span>Offline Mock</span></div></div></div></div>
+      </details>
+
+      <details class="item">
+        <summary><div class="visual"><div class="stack context"><div>Session<br>Lifecycle</div><div>Workspace<br>Memory</div><div>Artifact<br>Pointer</div></div></div><div class="copy"><span class="num">03 / CONTEXT ENGINEERING</span><h3>长任务上下文与恢复</h3><p>用 transcript、compact 和 artifact pointer 控制预算，同时保留可恢复性与可追溯性。</p><div class="open"><span>查看工程细节</span><b>＋</b></div></div></summary>
+        <div class="detail"><div class="detail-grid"><h4>Context lifecycle</h4><div><p>实现 Session 生命周期、JSONL transcript、Workspace Memory、context compact 与工具输出外部化；以摘要和 artifact 指针替代大对象直接注入，缓解 context flooding。</p><p>长任务中断后，可从 transcript 和 Workspace 状态恢复，而非依赖不可解释的对话上下文。</p><div class="tags"><span>Session</span><span>JSONL</span><span>Memory</span><span>Compaction</span><span>Artifact</span></div></div></div></div>
+      </details>
+
+      <details class="item">
+        <summary><div class="visual"><div class="stack safety"><div>Permission<br>Gate</div><div>Path<br>Constraint</div><div>Hash-chain<br>Audit</div></div></div><div class="copy"><span class="num">04 / SAFETY & RECOVERY</span><h3>工具执行安全边界</h3><p>权限门禁、真实路径约束、fail-closed、崩溃恢复和 hash-chain 审计。</p><div class="open"><span>查看安全设计</span><b>＋</b></div></div></summary>
+        <div class="detail"><div class="detail-grid"><h4>Fail closed</h4><div><p>在 Sidecar / Tool 执行链中加入权限门禁、cwd 真实路径约束和路径逃逸拒绝；不确定状态默认拒绝，而不是带风险继续执行。</p><p>通过崩溃恢复与 hash-chain Audit 保存关键执行证据，并以 Full Tour 验证多轮工具、权限拒绝、HTTP、Recovery 与审计主链。</p><div class="facts"><div class="fact"><strong>99</strong><span>测试函数</span></div><div class="fact"><strong>5</strong><span>核心安全机制</span></div><div class="fact"><strong>1</strong><span>Full Tour 主链</span></div></div></div></div></div>
+      </details>
+
+      <details class="item">
+        <summary><div class="visual"><div class="runtime"><div class="node">Router</div><div class="node">Planner</div><div class="node">Executor</div><div class="node">Verifier</div><div class="node">Trace</div></div></div><div class="copy"><span class="num">05 / PRODUCTION RUNTIME</span><h3>可观测排障 Agent</h3><p>typed AgentState、条件路由和完整 trace，让多轮检索可约束、可回放、可归因。</p><div class="open"><span>查看生产实践</span><b>＋</b></div></div></summary>
+        <div class="detail"><div class="detail-grid"><h4>Ctrip production</h4><div><p>基于 LangGraph 实现 Router–Planner–Executor–Verifier–Synthesizer 状态机，以 typed AgentState 管理 query、plan、evidence、verification、tool calls、迭代预算与完整 trace。</p><p>统一 Keyword、Semantic、Graph、Hybrid 与 read_chunk 工具协议，使用 RRF 和 CrossEncoder 进行多路召回融合与重排；embedding / reranker 独立为 HTTP 服务供训练 rollout 复用。</p><div class="tags"><span>LangGraph</span><span>Typed State</span><span>Trace</span><span>RRF</span><span>CrossEncoder</span></div></div></div></div>
+      </details>
+
+      <details class="item">
+        <summary><div class="visual"><div class="stack"><div>Oracle<br>ReAct</div><div>LoRA SFT<br>+ GRPO</div><div>Replayable<br>Reward</div></div></div><div class="copy"><span class="num">06 / TRAINING & EVALUATION</span><h3>可回放训练与评测链路</h3><p>让训练 rollout 与线上检索共享环境，用细粒度诊断区分搜索路径失败。</p><div class="open"><span>查看训练链路</span><b>＋</b></div></div></summary>
+        <div class="detail"><div class="detail-grid"><h4>Verifiable loop</h4><div><p>将 2–4 hop gold evidence 转换为 Oracle ReAct 监督轨迹，串联 LLaMA-Factory LoRA SFT 与 verl 多轮 GRPO；保留逐轮 tool call、tool response 与 reward 明细，支持确定性回放和策略调试。</p><p>联合 Correctness、Faithfulness、gold-hop precision / recall、Grounding、格式与搜索不足惩罚，并以 premature collapse、over-extension、step alignment 区分漏检、过早停止和过度搜索。</p><div class="tags"><span>LLaMA-Factory</span><span>verl</span><span>GRPO</span><span>Reward</span><span>Replay</span></div></div></div></div>
+      </details>
+
+      <details class="item" id="research">
+        <summary><div class="visual" style="background:#e8e4dc"><div style="font:500 34px Georgia,serif;text-align:center">MemoWorld<br><small style="font:12px monospace;color:#777">Memory World Generation</small></div></div><div class="copy"><span class="num">07 / AGENT MEMORY RESEARCH</span><h3>MemoWorld</h3><p>从固定任务流训练转向可组合的记忆依赖模体。</p><div class="open"><span>查看研究</span><b>＋</b></div></div></summary>
+        <div class="detail"><div class="detail-grid"><h4>AAAI 2027</h4><div><p>共同第一作者，在投。提出 MemoWorld，通过动态构造证据结构训练 Agent 完成记忆写入、修订、分支与遗忘，缓解“静态世界过拟合”。</p><p>在相同交互预算下，模型在三项外部基准上的零样本成功率均获提升，并在缺失模体实验中实现定向再生与局部能力恢复。</p><div class="tags"><span>Agent Memory</span><span>Generalization</span><span>Failure-conditioned</span></div></div></div></div>
+      </details>
+    </div>
+
+    <section class="more"><h2>补充能力</h2><div class="rows"><div class="row"><strong>业务与代码仓库知识库</strong><span>ES 双索引 · Agentic Search · 80%+</span></div><div class="row"><strong>跨仓需求调研 Skill</strong><span>L1→L2→L3 · 主–子 Agent · 80%+</span></div><div class="row"><strong>教育与奖项</strong><span>国家奖学金 · 数学竞赛一等奖 · SCI 论文两篇</span></div></div></section>
+  </main>
+
+  <footer id="contact"><div class="wrap foot-main"><div><span class="label">Contact</span><h2>Build the system<br>around the model.</h2></div><div class="contact"><a href="mailto:wzr8277@163.com">wzr8277@163.com</a><a href="https://github.com/WZR8277">github.com/WZR8277</a><a href="https://wzr8277.github.io/">Agent Engineer 版本 ↗</a><span>上海 · 开放 Harness / Agent Infra 岗位机会</span></div></div><div class="wrap base"><span>王昭容 · Agent Harness Engineer</span><span>© 2026</span></div></footer>
+</body>
+</html>
