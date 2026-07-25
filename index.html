@@ -31,6 +31,40 @@
     h1{font-size:clamp(48px,6vw,72px);line-height:1.04}.case-no{font-size:12px}.case-copy p{font-size:15px}.open-case{font-size:12px}.harness-map span,.support-visual .blocks span,.open-loop span{font-size:12px}.modal-image{cursor:zoom-in}.pillar b,.star-item b{font-size:12px}.pillar h4,.star-item h4{font-size:16px}.pillar p,.star-item p{font-size:15px}.result span{font-size:12px}#image-viewer{width:100vw;height:100vh;max-width:none;max-height:none;background:rgba(15,16,18,.96);border-radius:0}#image-viewer img{width:100%;height:100%;object-fit:contain;padding:34px}#image-viewer .close{position:fixed;right:22px;top:18px;z-index:4;font-size:22px}
     @media(max-width:720px){.flagship,.single-case .case-card,.case-section>.education-cover{grid-template-columns:1fr}.support-grid,.pillars,.star-grid{grid-template-columns:1fr}.harness-visual{min-height:220px}.result-row{grid-template-columns:1fr 1fr}.modal-body{padding:20px}.filters{flex-wrap:wrap;margin-bottom:58px}}
   </style>
+  <style>
+    /* One coherent entry-page scale. Modal typography remains intentionally denser. */
+    :root{--muted:#5f5e59;--line:#d6d3ca}
+    body{font-size:16px;line-height:1.6}
+    .wrap{width:min(1120px,calc(100% - 56px))}
+    nav{height:76px}nav strong{font-size:20px;font-weight:600}nav div{gap:28px}nav a{font-size:14px;font-weight:500;padding:8px 0;border-bottom:1px solid transparent}nav a:hover{color:var(--ink);border-color:var(--ink)}
+    header{padding:74px 0 58px;grid-template-columns:minmax(0,1fr);gap:38px;align-items:start}
+    .label{font-size:14px;line-height:1.5;letter-spacing:.055em;color:#5b5a55}
+    h1{font-size:clamp(52px,6vw,76px);margin:12px 0 22px}
+    header p{max-width:840px;font-size:17px;line-height:1.78;color:#343431}
+    .quick{border-left:0;border-top:1px solid var(--line);padding:22px 0 0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}
+    .quick div{gap:7px;padding-right:24px;border-right:1px solid var(--line)}.quick div:last-child{border-right:0}
+    .quick span{font-size:13px;color:#686762}.quick strong{font-size:15px;line-height:1.5}
+    .intro{padding:18px 0;font-size:13px;letter-spacing:.015em;color:#5f5e59}
+    main{padding:68px 0 112px}.section-title{margin-bottom:26px}.section-title h2{font-size:34px}.section-title span{font-size:14px;color:#5f5e59}
+    .filters{justify-content:flex-start;gap:0;margin:0 0 86px;border-bottom:1px solid var(--line)}
+    .filters a{background:transparent;border:0;border-radius:0;padding:13px 22px 12px;font:500 14px/1.4 inherit;color:#55544f;position:relative}
+    .filters a:first-child{padding-left:0}.filters a:hover{color:var(--ink)}.filters a:after{content:"";position:absolute;left:22px;right:22px;bottom:-1px;height:2px;background:transparent}.filters a:first-child:after{left:0}.filters a:hover:after{background:var(--ink)}
+    .case-section{padding-bottom:104px;scroll-margin-top:24px}.case-head{margin-bottom:38px}.case-head .label{font-size:14px;letter-spacing:.055em}.case-head h2{font-size:34px;margin:8px 0}.case-head p{font-size:15px}
+    .case-section>.education-cover{min-height:176px;padding:34px;border-radius:10px}.education-cover h3{font-size:27px}.education-cover p{font-size:15px;color:#55544f;line-height:1.65}
+    .case-card{border-radius:10px;box-shadow:0 10px 28px rgba(25,25,20,.04)}
+    .flagship{grid-template-columns:42% 1fr}.harness-visual{min-height:300px}.harness-map{grid-template-columns:repeat(2,minmax(0,118px));gap:10px;padding:0 28px;max-width:100%}.harness-map span{padding:13px 8px;font-size:10px;line-height:1.35}
+    .case-copy{padding:30px 32px}.case-no{font-size:11px;letter-spacing:.035em}.case-copy h3{font-size:27px;margin:11px 0}.case-copy p{font-size:15px;line-height:1.72;color:#55534e}.open-case{font-size:12px;margin-top:22px}
+    .support-grid{gap:20px}.support-card .case-copy{padding:26px}.support-card h3{font-size:24px}.support-visual{height:176px;padding:0 22px}.support-visual .blocks{max-width:100%;gap:7px}.support-visual .blocks span{padding:11px 8px;font-size:10px;line-height:1.3;white-space:nowrap}
+    .single-case .case-card{grid-template-columns:40% 1fr}.open-loop span{font-size:10px;line-height:1.35}
+    .awards{margin-top:10px;padding-top:34px}.award{font-size:15px}.award span{color:#5d5c57}
+    @media(max-width:720px){
+      .wrap{width:min(100% - 32px,1120px)}nav{height:auto;min-height:68px;gap:16px}nav div{gap:14px;overflow-x:auto}nav a{font-size:13px;white-space:nowrap}
+      header{padding:52px 0 44px}.quick{grid-template-columns:1fr;gap:0}.quick div{border-right:0;border-bottom:1px solid var(--line);padding:13px 0}.quick div:last-child{border-bottom:0}
+      .intro{font-size:12px}.section-title{align-items:flex-start;gap:12px}.filters{overflow-x:auto;justify-content:flex-start;margin-bottom:64px}.filters a{white-space:nowrap;padding-inline:15px}.filters a:first-child{padding-left:0}
+      .case-section{padding-bottom:78px}.flagship,.single-case .case-card,.case-section>.education-cover{grid-template-columns:1fr}.support-grid{grid-template-columns:1fr}.harness-visual{min-height:220px}.support-visual{height:160px}
+      .case-copy{padding:25px 24px}.education-cover>div{border-left:0;border-top:1px solid #cbd4db;padding:24px 0 0}.education-cover>div:first-child{border-top:0;padding-top:0}
+    }
+  </style>
 </head>
 <body>
   <nav class="wrap"><strong>WZR / Harness</strong><div><a href="#projects">项目</a><a href="#awards">教育与奖项</a><a href="#contact">联系</a></div></nav>
