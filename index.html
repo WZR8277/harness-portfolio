@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f7f7f4">
-  <meta name="description" content="王昭容的 Agent Harness 工程师个人主页：运行时、Memory、Context、工具边界、回放与评测。">
+  <meta name="description" content="王昭容的 Agent Harness 工程师个人主页：Agent Memory、Agentic RAG、Harness 与真实业务 Agent 实践。">
   <link rel="canonical" href="https://wzr8277.github.io/harness-portfolio/">
   <title>王昭容 · Agent Harness 工程师</title>
   <link rel="stylesheet" href="./styles.css">
@@ -13,7 +13,7 @@
   <a class="skip-link" href="#main">跳到主要内容</a>
 
   <header class="site-header" aria-label="主导航">
-    <a class="brand" href="#top" aria-label="返回首页">WZR</a>
+    <a class="brand" href="#top" aria-label="返回首页">王昭容</a>
     <nav class="nav-links" aria-label="页面章节">
       <a href="#education">教育</a>
       <a href="#work">公司经历</a>
@@ -21,7 +21,6 @@
       <a href="#opensource">开源项目</a>
       <a href="#honors">荣誉</a>
     </nav>
-    <a class="edition-link" href="https://wzr8277.github.io/">Agent 版</a>
   </header>
 
   <main id="main">
@@ -29,8 +28,7 @@
       <div class="hero-copy">
         <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span>Agent Harness Engineer · Portfolio</p>
         <h1 id="hero-title">王昭容</h1>
-        <p class="hero-role">让 Agent 的长任务，<em>可约束、可恢复、可验证</em>。</p>
-        <p class="hero-intro">浙江大学电子信息硕士，曾任携程火车票研发部 Agent 开发工程师。关注 <strong>Memory</strong>、Context Engineering、工具协议、Transcript Replay 与安全边界，把模型之外的工程系统做扎实。</p>
+        <p class="hero-intro">浙江大学电子信息硕士，曾任携程火车票研发部 Agent 开发工程师。具备 <strong>Agent Memory</strong>、Agentic RAG 与 Harness 体系建设经验，主导出境订单排障 Agent，将根因诊断准确率从 61.7% 提升至 78.3%。</p>
         <div class="hero-actions">
           <a class="button button-primary" href="#work">查看 Harness 实践 <span aria-hidden="true">↓</span></a>
           <a class="button button-secondary" href="#opensource">查看开源贡献</a>
@@ -39,44 +37,38 @@
 
       <div class="proof-grid" aria-label="代表性成果">
         <article class="proof-card proof-featured">
+          <small class="proof-source">出境订单排障 Agent Harness</small>
           <strong>240</strong>
           <span>固定回放用例</span>
-          <small>脱敏任务快照</small>
+          <small>脱敏任务快照 + 标准根因</small>
         </article>
         <article class="proof-card">
+          <small class="proof-source">出境订单排障 Agent Harness</small>
           <strong>5</strong>
           <span>失败归因环节</span>
-          <small>Context → Answer</small>
+          <small>上下文 · 检索 · 工具 · 停止 · 答案</small>
         </article>
         <article class="proof-card">
-          <strong>3</strong>
+          <small class="proof-source">learn-workbuddy</small>
+          <strong>3 层</strong>
           <span>Memory 作用域</span>
-          <small>User · Workspace · Session</small>
+          <small>user · workspace · session</small>
         </article>
         <article class="proof-card">
-          <strong>2</strong>
-          <span>核心章节重构</span>
-          <small>Loop · Dispatch</small>
+          <small class="proof-source">研究论文</small>
+          <strong>2 篇</strong>
+          <span>AAAI 2027 在投</span>
+          <small>MemoWorld（共一）· RVD（三作）</small>
         </article>
       </div>
 
-      <a class="scroll-cue" href="#principles">Scroll <span aria-hidden="true">↓</span></a>
-    </section>
-
-    <section class="principles reveal" id="principles" aria-labelledby="principles-title">
-      <div class="section-kicker">Harness stance</div>
-      <h2 id="principles-title">我如何设计运行边界</h2>
-      <div class="principle-grid">
-        <article><span>01</span><h3>每个循环都要有界</h3><p>工具预算、轮次、停止原因与错误结构必须是显式契约。</p></article>
-        <article><span>02</span><h3>状态必须能恢复</h3><p>会话、Memory、工具结果与 trace 可持久化、可回放、可继续。</p></article>
-        <article><span>03</span><h3>失败必须能归因</h3><p>把问题定位到上下文、检索、工具、停止条件或答案生成。</p></article>
-      </div>
+      <a class="scroll-cue" href="#education">Scroll <span aria-hidden="true">↓</span></a>
     </section>
 
     <section class="portfolio-section reveal" id="education" aria-labelledby="education-title">
       <header class="section-heading">
         <div><p class="section-kicker">Education · 2018—2025</p><h2 id="education-title">教育经历</h2></div>
-        <p>从智能科学与技术，到人工智能与计算机视觉研究训练。</p>
+        <p>研究训练覆盖计算机视觉、小模型微调、Agent Memory 与自演化 Agent；形成 2 篇 SCI，并有 2 篇工作在投 AAAI 2027。</p>
       </header>
       <div class="education-grid">
         <button class="entry-card education-card" type="button" data-detail="zju" aria-label="查看浙江大学教育经历详情">
@@ -191,29 +183,27 @@
         <div class="opensource-copy">
           <span class="entry-meta">adongwanai / learn-workbuddy · 核心作者</span>
           <h3>learn-workbuddy</h3>
-          <p>一份从 Agent Loop 到桌面 Harness 的 24 章开源工程课。我的近期贡献聚焦有界 Agent Loop 与统一 Tool Registry，让停止、参数校验、错误和并发策略成为显式契约。</p>
-          <div class="metric-row"><span><strong>24</strong> 章</span><span><strong>27</strong> 张架构图</span><span><strong>2</strong> 核心章节重构</span></div>
+          <p>主导 Agent Harness、分层 Memory 与 RAG/Context 关键章节设计，覆盖有界 Loop、工具与权限协议、三层记忆体系，以及可解释检索与回归评测。</p>
+          <div class="metric-row"><span><strong>Harness</strong> Loop / Tools / Replay</span><span><strong>Memory</strong> User / Workspace / Session</span><span><strong>RAG</strong> Recall@K / MRR</span></div>
           <span class="entry-more">查看我的贡献与仓库链接 <span aria-hidden="true">↗</span></span>
         </div>
         <div class="harness-map" aria-hidden="true">
-          <div><b>Loop</b><span>有界停止</span></div>
-          <div><b>Tools</b><span>统一注册</span></div>
-          <div><b>Memory</b><span>分层作用域</span></div>
-          <div><b>Context</b><span>按需组装</span></div>
-          <div><b>Guard</b><span>权限审计</span></div>
+          <div><b>Loop</b><span>有界循环</span></div>
+          <div><b>Tools</b><span>注册 / 校验</span></div>
+          <div><b>Memory</b><span>分层 / 恢复</span></div>
+          <div><b>Context</b><span>来源 / 评分</span></div>
+          <div><b>Eval</b><span>Recall@K / MRR</span></div>
         </div>
       </button>
     </section>
 
     <section class="portfolio-section reveal" id="stack" aria-labelledby="stack-title">
       <header class="section-heading compact-heading">
-        <div><p class="section-kicker">Working set</p><h2 id="stack-title">技术栈</h2></div>
+        <div><p class="section-kicker">Skills</p><h2 id="stack-title">专业技能</h2></div>
       </header>
-      <div class="stack-grid">
-        <article><h3>Runtime</h3><ul><li>Bounded Loop</li><li>Session State</li><li>Transcript Replay</li><li>Structured Errors</li></ul></article>
-        <article><h3>Memory / Context</h3><ul><li>User / Workspace / Session</li><li>Context Assembly</li><li>Compaction</li><li>Leakage Protection</li></ul></article>
-        <article><h3>Tools / Safety</h3><ul><li>Tool Registry</li><li>Schema Validation</li><li>Permission Hooks</li><li>Read-only Replay</li></ul></article>
-        <article><h3>Evaluation</h3><ul><li>Fixed Cases</li><li>Trace Diff</li><li>Recall@K / MRR</li><li>Failure Attribution</li></ul></article>
+      <div class="stack-grid stack-grid-compact">
+        <article><h3>Vibe Coding</h3><ul><li>Codex</li><li>Claude Code</li><li>Cursor</li></ul></article>
+        <article><h3>Agent 工程</h3><ul><li>Agent Memory</li><li>Agentic RAG</li><li>Harness</li></ul></article>
       </div>
     </section>
 
@@ -226,6 +216,8 @@
         <span>全国大学生数学竞赛一等奖</span>
         <span>医学图像处理 SCI 论文</span>
         <span>小模型 Finetune SCI 论文</span>
+        <span>MemoWorld · AAAI 2027 在投</span>
+        <span>RVD · AAAI 2027 在投</span>
       </div>
     </section>
   </main>
@@ -233,7 +225,7 @@
   <footer class="site-footer" id="contact">
     <div>
       <p class="section-kicker">Contact</p>
-      <h2>期待把 Agent 的运行边界做扎实。</h2>
+      <h2>联系我</h2>
       <p>现居上海 · 求职方向：Agent Harness 工程师</p>
     </div>
     <div class="contact-links">
@@ -241,7 +233,7 @@
       <a href="tel:+8618811498277">188 1149 8277</a>
       <a href="https://github.com/WZR8277" target="_blank" rel="noreferrer">GitHub · WZR8277</a>
     </div>
-    <p class="copyright">© 2026 王昭容 · Built for clarity, evidence and accessibility.</p>
+    <p class="copyright">© 2026 王昭容</p>
   </footer>
 
   <div class="modal-backdrop" id="detail-backdrop" hidden>
